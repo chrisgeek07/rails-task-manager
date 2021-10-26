@@ -3,12 +3,12 @@
 <p class="card p-2"><%= @task.details %></p>
 <%if @task.completed == true%>
   <li class="list-group-item">
-        <input class="form-check-input me-1" type="checkbox" value="<% @task.completed %>" aria-label="...">
+        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
         <p>This task is completed</p>
   </li>
   <% else %>
   <li class="list-group-item">
-        <input class="form-check-input me-1" type="checkbox" value="<% @task.completed %>" aria-label="...">
+        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
         <p>This task is not completed yet</p>
   </li>
 <% end %>
