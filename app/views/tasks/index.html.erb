@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>My Tasks</h1>
+  <ul class="list-group">
+    <% @tasks.each do |task| %>
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="checkbox" value="<% task.completed %>" aria-label="...">
+        <%= link_to task.title, task_path(task) %>
+          <%= link_to fa_icon("trash"),
+          task_path(task),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+      </li>
+    <% end %>
+  </ul>
+  <hr>
+  <%= link_to 'Add new task', tasks_new_path %>
+</div>
